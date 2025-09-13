@@ -1,11 +1,8 @@
 package database
 
 import (
-
 	"time"
-	
 	"gorm.io/gorm"
-
 )
 // User モデル
 type User struct {

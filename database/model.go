@@ -8,7 +8,7 @@ import (
 type User struct {
     gorm.Model
     Name     string `json:"name" gorm:"size:255;not null;unique"`
-    Password string `json:"password" gorm:"size:255;not null"`
+    Password string `json:"-" gorm:"size:255;not null"`
 
     Figures []Figure `json:"figures"` // ユーザーが持つ記録
 }

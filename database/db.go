@@ -22,7 +22,7 @@ func init() {
 	dsn := user + ":" + pass + "@tcp(" + host + ":" + port + ")/" + name + "?charset=utf8mb4&parseTime=True&loc=Local"
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatalln(dsn + " database cannot connect")
+		log.Fatalln("Database cannot connect: ", err)
 	}
 	DB.AutoMigrate(&User{}, &Figure{})
 }

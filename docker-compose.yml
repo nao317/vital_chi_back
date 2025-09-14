@@ -15,6 +15,7 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=vital_chi_db
+      - SUPABASE_PROJECT_REF=${SUPABASE_PROJECT_REF}
 
   mysql:
     image: mysql:8.0
